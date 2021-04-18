@@ -4,14 +4,12 @@ Potentially good router, but does not work at all. Many mistakes in config scrip
 
 ## Get firmware for restoration
 
-1.Telnet to 192.168.1.1 with admin/admin and get castrated console, where you can do nothing
-2.But is you call ps, you saw something like this
-
+1. Telnet to 192.168.1.1 with admin/admin and get castrated console, where you can do nothing
+2. But is you call ps, you saw something like this
 ```
 wget -T 15 -t 1 --no-check-certificate https://ac-link.com/upgrade/WE1026-5G/latest.txt.en?sn=f8:5e:3c:1e:xx:xx -O /tmp/latest.txt -o /tmp/wget.log
 ```
 3. Download it and open
-
 ```
 $ cat latest.txt.en\?sn\=f8\:5e\:3c\:1e\:xx\:xx 
 latest=19.1101
@@ -21,9 +19,7 @@ changelog=19.11.01\nUpdate logs\n1. Fix the possible dial failure bug caused by 
 ....
 Many strings ommitted
 ```
-
 4. Now download firmware
-
 ```
 wget https://ac-link.com/upgrade/WE1026-5G/mt7620-WE1026-5G-20191101_233435.bin
 ```
@@ -41,6 +37,17 @@ OR
 ```
 curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http://192.168.1.1/
 ``` 
+7. Wait for some time, router will reboot automatically
+
+## How to get selial console
+
+1. Unscrew router from antenna side
+2. Pull out mother board
+3. Connect serail terminal to RX/TX/GND pins
+4. Open terminal at port with 115200/8/1
+5. Press Enter
+
+## Boot log after flashing
 
 ```
 U-Boot 1.1.3 (Jan 23 2015 - 17:03:11)
