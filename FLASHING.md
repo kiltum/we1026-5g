@@ -1,14 +1,26 @@
 # How to flash to openwrt
 
-TL;DR; Status: OpenWRT boots nice , but after about 90 second reboots
+TL;DR; Status: OpenWRT boots nice , but reboots every 2 minutes 
 
-## Images
+## Images URL
 
-1. https://openwrt.org/toh/hwdata/zbt/zbt_we1026-5g - works, flashed, but reboots
+1. https://openwrt.org/toh/hwdata/zbt/zbt_we1026-5g - old, reboots
+2. https://downloads.openwrt.org/releases/19.07.7/targets/ramips/mt7620/ - looks like really latest, but reboots
+3. https://drive.google.com/drive/folders/1few_ljURycBckp9P4uo09TbD7Y2WNETn - reboots
+4. https://www.ofmodemsandmen.com/firmware16.html - reboots
 
+## Images status
 
+1. gargoyle_1.11.0-ramips-mt7620-we1026-5g-16m-squashfs-sysupgrade.bin - reboots
+2. openwrt-we1026-5G-GO2020-03-01-upgrade.bin - reboots
+3. openwrt-WiFiX-WE1026-5G-GO2020-05-16-upgrade.bin - reboots
+4. openwrt-19.07.7-ramips-mt7620-we1026-5g-16m-initramfs-kernel.bin - reboots
+5. openwrt-19.07.7-ramips-mt7620-we1026-5g-16m-squashfs-sysupgrade.bin - reboots
+6. mt7620-WE1026-5G-20191101_233435.bin - original firmware, no reboots, but routing problem so no work
 
-## Image preparing
+## If header checksum error -> header resign
+
+Actually this not need. 
 
 1. Grab image
 2. Open image in hex editor

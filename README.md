@@ -2,6 +2,8 @@
 
 Potentially good router, but does not work at all. Many mistakes in config scripts.
 
+SSH available on 2222 port, but no credentials yet
+
 ## Get firmware for restoration
 
 1. Telnet to 192.168.1.1 with admin/admin and get castrated console, where you can do nothing
@@ -30,7 +32,7 @@ wget https://ac-link.com/upgrade/WE1026-5G/mt7620-WE1026-5G-20191101_233435.bin
 2. Connect Ethernet cable to brick, set own ip to some in 192.168.1.0/24 network. 
 3. Start ping 192.168.1.1
 4. Power on router with pressed reset button
-5. when ping appears, unpress reset
+5. wait 3-4 sec, unpress reset
 6. point browser to 192.168.1.1 and upload bin file. 
 OR
 6. ask curl to do this. REPLACE 2.bin to your file name
@@ -38,6 +40,8 @@ OR
 curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http://192.168.1.1/
 ``` 
 7. Wait for some time, router will reboot automatically
+
+PS: Log of process also shows thru serial
 
 ## How to get selial console
 
