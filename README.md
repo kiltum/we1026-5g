@@ -43,7 +43,7 @@ curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http
 
 1. Unscrew router from antenna side
 2. Pull out mother board
-3. Connect serail terminal to RX/TX/GND pins
+3. Connect serial terminal to RX/TX/GND pins
 4. Open terminal at port with 115200/8/1
 5. Press Enter
 
