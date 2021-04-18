@@ -17,10 +17,13 @@ TL;DR; Status: OpenWRT boots nice , but reboots every 2 minutes
 4. openwrt-19.07.7-ramips-mt7620-we1026-5g-16m-initramfs-kernel.bin - reboots
 5. openwrt-19.07.7-ramips-mt7620-we1026-5g-16m-squashfs-sysupgrade.bin - reboots
 6. mt7620-WE1026-5G-20191101_233435.bin - original firmware, no reboots, but routing problem so no work
+7. openwrt-18.06.9-ramips-mt7620-we1026-5g-16m-squashfs-sysupgrade.bin - reboots
 
 ## Possible fix 
 
 1. for gargoyle - https://www.gargoyle-router.com/phpbb/viewtopic.php?t=10920 - log, ask `logread` and (poss) remove `/usr/data/bwmon` and `/usr/data/quotas`
+
+none. no any errors in logs ;(
 
 ## If header checksum error -> header resign
 
