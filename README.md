@@ -35,11 +35,11 @@ wget https://ac-link.com/upgrade/WE1026-5G/mt7620-WE1026-5G-20191101_233435.bin
 5. wait 3-4 sec, unpress reset
 6. point browser to 192.168.1.1 and upload bin file. 
 OR
-6. ask curl to do this. REPLACE 2.bin to your file name
+6. ask curl to do this. REPLACE 2.bin to your file name (NOTE: No pings during upload) 
 ```
 curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http://192.168.1.1/
 ``` 
-NOTE: No pings during upload
+
 7. Wait for some time, router will reboot automatically
 
 PS: Log of process also shows thru serial
