@@ -39,6 +39,7 @@ OR
 ```
 curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http://192.168.1.1/
 ``` 
+NOTE: No pings during upload
 7. Wait for some time, router will reboot automatically
 
 PS: Log of process also shows thru serial

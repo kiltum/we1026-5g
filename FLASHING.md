@@ -64,3 +64,9 @@ Use the "passwd" command to set up a new password
 in order to prevent unauthorized SSH logins.
 --------------------------------------------------
 ```
+
+## Web UI
+
+Between reboots I able log to web UI
+
+![Image of console](console.png)
