@@ -1,6 +1,46 @@
 # WE1026-5G
 
+Potentially good router, but does not work at all. Many mistakes in config scripts and no internet at all, even when shows that all ok
+
+## Get firmware for restoration
+
+1.Telnet to 192.168.1.1 with admin/admin and get castrated console, where you can do nothing
+2.But is you call ps, you saw something like this
+
+```
+wget -T 15 -t 1 --no-check-certificate https://ac-link.com/upgrade/WE1026-5G/latest.txt.en?sn=f8:5e:3c:1e:xx:xx -O /tmp/latest.txt -o /tmp/wget.log
+```
+3. Download it and open
+
+```
+$ cat latest.txt.en\?sn\=f8\:5e\:3c\:1e\:xx\:xx 
+latest=19.1101
+release_time=2019-11-01 23:34:35
+url=https://ac-link.com/upgrade/WE1026-5G/mt7620-WE1026-5G-20191101_233435.bin
+changelog=19.11.01\nUpdate logs\n1. Fix the possible dial failure bug caused by simcom module configuring APN\n2. Fix the bug that APN cannot be cleared in the 
+....
+Many strings ommitted
+```
+
+4. Now download firmware
+
+```
+wget https://ac-link.com/upgrade/WE1026-5G/mt7620-WE1026-5G-20191101_233435.bin
+```
+
 ## How to restore from brick
+
+1. Download firmware as described above
+2. Connect Ethernet cable to brick, set own ip to some in 192.168.1.0/24 network. 
+3. Start ping 192.168.1.1
+4. Power on router with pressed reset button
+5. when ping appears, unpress reset
+6. point browser to 192.168.1.1 and upload bin file. 
+OR
+6. ask curl to do this. REPLACE 2.bin to your file name
+```
+curl -i -X POST -H "Content-Type: multipart/form-data" -F "firmware=@2.bin" http://192.168.1.1/
+``` 
 
 ```
 U-Boot 1.1.3 (Jan 23 2015 - 17:03:11)
