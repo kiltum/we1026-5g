@@ -1,11 +1,11 @@
 # WE1026-5G
 
-Potentially good router, but does not work at all. Many mistakes in config scripts and no internet at all, even when shows that all ok
+Potentially good router, but does not work at all. Many mistakes in config scripts.
 
 ## Get firmware for restoration
 
 1. Telnet to 192.168.1.1 with admin/admin and get castrated console, where you can do nothing
-2. But is you call ps, you saw something like this
+2. But you can call ps, look at something like this
 ```
 wget -T 15 -t 1 --no-check-certificate https://ac-link.com/upgrade/WE1026-5G/latest.txt.en?sn=f8:5e:3c:1e:xx:xx -O /tmp/latest.txt -o /tmp/wget.log
 ```
